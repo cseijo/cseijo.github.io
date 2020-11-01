@@ -11,10 +11,15 @@ title: "Chariz Seijo"
     - Mental health policy
     - Mental health services research
 
+* Columbia Mailman MPH candidate
+* Interests: 
+    - Implementation science
+    - Community-partnered research
+    - Mental health policy
+    - Mental health services research
+
+* About the site
+
 ### [Resume](resume.html)
 
 * Recent research and work experiences
-
-### [About](about.html)
-
-* About the site
