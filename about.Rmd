@@ -3,6 +3,4 @@ title: "About this site"
 ---
 Created with the help of Dr. Jeff Goldsmith's Data Science class using R Markdown and GitHub.
 
-Please email me through the link above if you have questions.
-
 ![](https://media.giphy.com/media/Pla0PNdXVHbqlEmiy4/giphy.gif)
