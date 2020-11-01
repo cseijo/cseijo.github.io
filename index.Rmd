@@ -2,8 +2,19 @@
 title: "Chariz Seijo"
 ---
 
-<img src="images/chariz.jpg" style="width:50%">
+<center> <img src="images/chariz.jpg" style="width:35%"> </center>
+
+* Columbia Mailman MPH candidate
+* Interests: 
+    - Implementation science
+    - Community-partnered research
+    - Mental health policy
+    - Mental health services research
+
+### [Resume](resume.html)
+
+* Recent research and work experiences
 
 ### [About](about.html)
 
-### [Resume](resume.html)
+* About the site

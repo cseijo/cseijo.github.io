@@ -1,5 +1,6 @@
 ---
-title: "Chariz Seijo's Resume"
+title: "Resume"
 ---
 
+<img src="images/resume2020.jpg">
 
