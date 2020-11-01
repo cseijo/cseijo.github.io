@@ -7,7 +7,7 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html 
-    - text: "LinkedIn"
+    - icon: fa-linkedin fa-lg
       href: https://linkedin.com/in/chariz-seijo/
     - icon: fa-envelope fa-lg
       href: mailto:<chariz.seijo@gmail.com>
