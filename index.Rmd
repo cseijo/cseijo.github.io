@@ -1,0 +1,9 @@
+---
+title: "Chariz Seijo"
+---
+
+<img src="images/chariz.jpg" style="width:50%">
+
+### [About](about.html)
+
+### [Resume](resume.html)
