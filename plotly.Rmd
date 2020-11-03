@@ -1,73 +1,78 @@
 ---
-title: "Instacart Dashboard"
+title: "Dashboard Instacart"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+library(flexdashboard)
+```
+
+```{r instacart, include=FALSE}
+data("instacart")
+
+instacart_tidy = 
+  instacart %>% 
+  sample_n(100000) %>%
+  mutate(order_dow = recode(order_dow, 
+       "1"="Sunday",
+       "2"="Monday",
+       "3"="Tuesday",
+       "4"="Wednesday",
+       "5"="Thursday",
+       "6"="Friday",
+       "0"="Saturday"), 
+       order_dow = factor(order_dow, 
+                 levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")))
+
 ```
 
 
-```{r}
-data("nyc_airbnb")
+Column {data-width=600}
+-----------------------------------------------------------------------
 
-nyc_airbnb = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>% 
-  select(neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>% 
-  filter(
-    neighbourhood_group == "Manhattan",
-    price %in% 100:500, 
-    room_type == "Entire home/apt"
-  ) %>% 
-  drop_na(rating)
-```
+### Number of products ordered by department and product type (based on sample)
 
-
-# Plotly plots
-
-## scatterplot
-
-```{r}
-nyc_airbnb %>% 
-  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
+```{r scatterplot, message=FALSE, warning=FALSE}
+instacart_tidy %>% 
+  group_by(department) %>%
+  count(product_name) %>%
   plot_ly(
-    x = ~lat, y = ~long, color = ~price, text = ~text_label, 
-    alpha = .5, type = "scatter", mode = "markers")
+    y = ~n, x = ~department, color = ~department, text = ~product_name,
+    type = "scatter", mode = "markers")
 ```
 
-## boxplot
+Column {data-width=400}
+-----------------------------------------------------------------------
 
-```{r}
-nyc_airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+### When are most fresh fruits and vegetables ordered during the week?
+
+```{r lineplot, message=FALSE, warning=FALSE}
+instacart_tidy %>% 
+  filter(aisle %in% c("fresh fruits", "fresh vegetables")) %>% 
+  count(order_dow) %>% 
+  filter(n > 100) %>% 
   plot_ly(
-    y = ~price, x = ~neighbourhood, color = ~neighbourhood,
-    type = "box", colors = "viridis")
+    x = ~order_dow, y = ~n, color = "order_dow", 
+    type = "scatter", mode = "lines", fill = "tozeroy", colors = "viridis")
 ```
 
-## bar plot
-
-```{r}
-nyc_airbnb %>% 
-  count(neighbourhood) %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+### What are the top products people reorder?
+ 
+```{r barplot, message=FALSE, warning=FALSE}
+instacart_tidy %>% 
+  filter(reordered == 1) %>% 
+  count(product_name) %>% 
+  mutate(product_name = fct_reorder(product_name, n)) %>% 
+  filter(n > 150) %>% 
   plot_ly(
-    x = ~neighbourhood, y = ~n, color = ~neighbourhood, 
-    type = "bar", colors = "viridis")
-```
-
-
-# ggplotly
-
-```{r}
-ggp_scatter = 
-  nyc_airbnb %>% 
-  ggplot(aes(x = lat, y = long, color = price)) + 
-  geom_point()
-
-ggplotly(ggp_scatter)
+    x = ~product_name, y = ~n, color = "product_name",
+    type = "bar", mode = "markers", colors = "viridis")
 ```
 
 

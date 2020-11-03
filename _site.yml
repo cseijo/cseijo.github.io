@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html 
+    - text: "Dashboard"
+      href: plotly.html 
     - text: "About"
       href: about.html
     - icon: fa-linkedin fa-lg
