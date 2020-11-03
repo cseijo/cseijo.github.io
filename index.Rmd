@@ -17,6 +17,10 @@ title: "Chariz Seijo"
 
 * Recent research and work experiences
 
+### [Dashboard](plotly.html)
+
+* Dashboard examining Instacart data
+
 ### [About](about.html)
 
 * About this site
