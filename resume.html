@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -250,6 +253,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -257,6 +323,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -314,10 +390,45 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="images/resume2020.jpg"></p>
+<div id="education" class="section level3">
+<h3>Education</h3>
+<p><strong>Master of Public Health</strong> - Expected May 2021 Columbia University, Mailman School of Public Health<br />
+Health Policy and Management, Certificate in Global Health Harriet and Robert Heilbrunn Scholarship recipient</p>
+<p><strong>Bachelor of Arts</strong> - May 2016 University of San Diego<br />
+Major: Psychology, Minor: Business Management<br />
+Semester at Sea: 50th Anniversary around the World Program, Spring 2014 Phi Beta Kappa, Psi Chi Honor Society</p>
+</div>
+<div id="work-experience" class="section level3">
+<h3>Work Experience</h3>
+<p><strong>Columbia University Mailman School of Public Health</strong> <strong>Graduate Student Researcher</strong> (Peter Muennig, MD, MPH) - April 2020 to Present<br />
+Develop manuscript seeking to understand the relationship between likelihood of depressive symptoms and COVID-19 concerns, such as isolation and reported symptoms.<br />
+Interpret and analyze quantitative data results using SAS.<br />
+Maintain partnership and facilitate data exchange with London-based COVID-19 symptom tracker start-up, Track Together.</p>
+<p><strong>Graduate Research Assistant</strong> (Kai Ruggeri, PhD) - September 2019 to December 2019<br />
+Developed a web-based financial planning tool as a behavioral intervention for a United Nations Women’s project supporting Filipinx migrant domestic workers in financial decision-making.<br />
+Created a pre-data collection data analysis plan on Open Science Framework and a report post-data collection summarizing our findings.<br />
+Maintained web-based surveys to collect data on financial planning and well-being.</p>
+<p><strong>Columbia University and Community League of the Heights</strong> <strong>We’re Here Community Outreach Worker</strong> - July 2020 to September 2020<br />
+Provide direct outreach in a program developed as a response to the shift to virtual learning for high school youth and their families during and after the COVID-19 lockdown in New York City.<br />
+Utilize motivational interviewing and behavioral activation techniques in weekly virtual check-ins with high school youth and their care-takers.<br />
+Manage recruitment and follow-up through direct outreach with 20+ participants.</p>
+</div>
+<div id="selected-publications" class="section level3">
+<h3>Selected Publications</h3>
+<p>Aarons, G.A., Seijo, C., Green, A.E., Moullin, J.C., Hasson, H., von Thiele Schwarz, U., James, S., Ehrhart, M.G., Ducarroz, S., Sevdalis, N., &amp; Willging, C. (2019). Fostering international collaboration in implementation science and research: A concept mapping exploratory study. <em>BMC Research Notes.</em> <a href="https://doi.org/10.1186/s13104-019-4800-4" class="uri">https://doi.org/10.1186/s13104-019-4800-4</a></p>
+<p>Sklar, M., Seijo, C., Goldman, R. E., &amp; Eaton, C. B. (2019). Beyond checkboxes: A qualitative assessment of physicians’ experiences providing care in a patient-centered medical home. <em>Journal of Evaluation in Clinical Practice.</em> <a href="https://doi.org/10.1111/jep.13136" class="uri">https://doi.org/10.1111/jep.13136</a></p>
+<p>Seijo, C., Xu, Y., Nakamura, G., Wihaib, R., &amp; Muennig, P. Associations between COVID-19 isolation, PCR test status, and reported symptoms and PHQ-2 scores. <em>Manuscript under review.</em></p>
+</div>
+<div id="skills" class="section level3">
+<h3>Skills</h3>
+<p>Beginner proficiency in Spanish and Tagalog.<br />
+R, SAS, SPSS, NVivo, Dedoose Qualtrics, Concept Systems (concept-mapping software), Noldus The Observer XT (observational data software), Microsoft Office Suite.</p>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -350,6 +461,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

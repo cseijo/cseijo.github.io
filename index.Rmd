@@ -5,6 +5,8 @@ title: "Chariz Seijo"
 <center> <img src="images/chariz.jpg" style="width:35%"> </center>
 
 * Columbia Mailman MPH candidate
+* Department of Health Policy & Management
+* Global Health Certificate
 * Interests: 
     - Implementation science
     - Community-partnered research
