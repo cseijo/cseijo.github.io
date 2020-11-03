@@ -8,19 +8,20 @@ output:
 
 ### Education
 
-**Master of Public Health** - Expected May 2021
+**Master of Public Health** - Expected May 2021  
 Columbia University, Mailman School of Public Health 	
 Health Policy and Management, Certificate in Global Health
 Harriet and Robert Heilbrunn Scholarship recipient
 
-**Bachelor of Arts** - May 2016
+**Bachelor of Arts** - May 2016  
 University of San Diego		
 Major: Psychology, Minor: Business Management  
 Semester at Sea: 50th Anniversary around the World Program, Spring 2014
 Phi Beta Kappa, Psi Chi Honor Society
 
 ### Work Experience
-**Columbia University Mailman School of Public Health**	
+
+**Columbia University Mailman School of Public Health**  	
 **Graduate Student Researcher** (Peter Muennig, MD, MPH) -  April 2020 to Present  
 Develop manuscript seeking to understand the relationship between likelihood of depressive symptoms and COVID-19 concerns, such as isolation and reported symptoms.  
 Interpret and analyze quantitative data results using SAS.  
@@ -31,7 +32,7 @@ Developed a web-based financial planning tool as a behavioral intervention for a
 Created a pre-data collection data analysis plan on Open Science Framework and a report post-data collection summarizing our findings.  
 Maintained web-based surveys to collect data on financial planning and well-being.  
 
-**Columbia University and Community League of the Heights**
+**Columbia University and Community League of the Heights**  
 **We’re Here Community Outreach Worker** - July 2020 to September 2020  
 Provide direct outreach in a program developed as a response to the shift to virtual learning for high school youth and their families during and after the COVID-19 lockdown in New York City.  
 Utilize motivational interviewing and behavioral activation techniques in weekly virtual check-ins with high school youth and their care-takers.  
@@ -45,7 +46,8 @@ Sklar, M., Seijo, C., Goldman, R. E., & Eaton, C. B. (2019). Beyond checkboxes: 
 
 Seijo, C., Xu, Y., Nakamura, G., Wihaib, R., & Muennig, P. Associations between COVID-19 isolation, PCR test status, and reported symptoms and PHQ-2 scores. *Manuscript under review.*  
 
-### Skills
+### Skills  
+
 Beginner proficiency in Spanish and Tagalog.  
 R, SAS, SPSS, NVivo, Dedoose Qualtrics, Concept Systems (concept-mapping software), Noldus The Observer XT (observational data software), Microsoft Office Suite.  
 
